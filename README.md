@@ -1,97 +1,92 @@
-# keylogger-cybersecurity-education
+# Keylogger-Cybersecurity-Education
 A Python-based keylogger built in a virtual environment for ethical hacking and cybersecurity education.
 
-<h1>Keylogger-Education🧑🏻‍💻</h1>
-
- ### [YouTube Demonstration](https://youtu.be/4kLb7yub7fU)
+ ### [YouTube Demonstration🎥](https://youtu.be/4kLb7yub7fU)
 
 <h2>Description</h2>
-The main goal of this project is to provide a basic Web Application Firewall (WAF) using Flask to help block common attacks such as SQL Injection and Cross-Site Scripting (XSS). This simple WAF serves as an introductory example for developers who want to understand how WAFs function and how they can be implemented in a web application. The project demonstrates how to inspect HTTP requests for malicious patterns and return a 403 Forbidden response when suspicious activity is detected.
+This project demonstrates how a keylogger works in a controlled virtual environment for educational purposes. It provides insights into how attackers might exploit such tools and emphasizes the importance of defensive strategies in cybersecurity. By setting up and testing a basic keylogger, this project contributes to ethical hacking knowledge and awareness.
+
+<h2>Main Goal</h2>
+The main goal of this project is to educate viewers on the mechanics of keyloggers and promote cybersecurity awareness. By understanding how keyloggers work, viewers can learn how to detect and defend against them, contributing to safer practices in the digital world.
 
 ## Programming Language💻
-- **Python** (The primary language used for this project.The WAF is built using Flask, which is a web framework for Python.)
+- **Python**: Chosen for its ease of use and extensive libraries, which allow us to demonstrate keylogging functionality efficiently.
 
 ## Utilities Used 💼
-- **flask**: A lightweight web framework for Python, used to build the web application and the Web Application Firewall (WAF). Used for routing, handling HTTP requests, and building a simple web application.
-
-- **Flask Middleware**: The custom middleware built into the Flask app to intercept and filter incoming HTTP requests (both GET and POST), blocking patterns associated with SQL Injection and XSS attacks.
+- **Virtual Machine:**: Used to create a safe and isolated environment for testing. Examples: UTM, VirtualBox, or VMware.
+- **Linux Distribution**: Kali Linux or Ubuntu, installed on the virtual machine.
 
 - **Python Standard Libraries**:
-jsonify: A Flask utility to return JSON responses, which is used to send the "Blocked by WAF" message.
-request: A Flask object used to access incoming HTTP request data (query strings, body data).
+pynput: Used for capturing and recording keystrokes.
 
 <h2>Environments Used </h2>
 
 - <b>**macOS**</b>
+- <b>**Kali Linux**</b>
 
-<h2>Program walk-through🦺</h2>
+<h2>Program Walk-through 🦺</h2>
 
 <p align="center">
-Created waf_project folder <br/>
-<img src="https://i.imgur.com/CMwnZVB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Created a new virtual machine (VM) environment for testing the keylogger. I used UTM 3.2.4 since new version didn't work. <br/>
+<img src="https://i.imgur.com/xbExKO6.png" height="80%" width="80%" alt="Virtual Machine Setup"/>
+<img src="https://i.imgur.com/ccAWTE9.png" height="80%" width="80%" alt="Virtual Machine Setup"/>
 <br />
 <br />
-Created a Python file named Berkays_WAF.py  <br/>
-<img src="https://i.imgur.com/FfuXL2L.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Upload Python and updated here. <br/>
+<img src="https://i.imgur.com/ecdyKST.png" height="80%" width="80%" alt="Keylogger Code"/>
+<p align="center">
+Created a Python file named `keylogger.py`. <br/>
+<img src="https://i.imgur.com/l9fPzeZ.png" height="80%" width="80%" alt="Keylogger Code"/>
 <br />
 <br />
-Write the Flask WAF Code <br/>
-<img src="https://i.imgur.com/iOHMmwR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Write the Python keylogger script using the `pynput` library to capture keyboard events and save them to a file. <br/>
+<img src="https://i.imgur.com/Fd3k0MF.png" height="80%" width="80%" alt="Keylogger Script"/>
 <br />
-Save and Exit
-To save the file in nano and exit.
+Save and Exit: To save the file in nano and exit. <br/>
 <br />
-<br />
-Install Flask and Run the Flask App:  <br/>
-<img src="https://i.imgur.com/m9kHRQS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Run the Python keylogger script: <br/>
+<img src="https://i.imgur.com/UMmXWBU.png" height="80%" width="80%" alt="Install pynput and Run Script"/>
 <br />
 <br />
-Now we are ready to check!  <br/>
-<img src="https://i.imgur.com/ofz9zdQ.png?1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Now we are ready to test the keylogger! <br/>
+<img src="https://i.imgur.com/qG2ldQc.png" height="80%" width="80%" alt="Testing Keylogger"/>
 <br />
 <br />
-Let's test the SQL Injection, try visiting this URL in browser:
-<br/>
-<img src="https://i.imgur.com/JtR0rpO.png?1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br /> As you see, The WAF should detect the malicious pattern.
-<br /> Return a 403 Forbidden response with the following message.
-<br /> Also, when I try with Cross-Site Scripting(XSS) it will say blocked by WAF <br/>
+Once you run the keylogger, every keystroke will be logged to `keylog.txt`. Here is an example of captured keystrokes. <br/>
+<img src="https://i.imgur.com/Yy1JSY7.png" height="80%" width="80%" alt="Captured Keystrokes"/>
 <br />
-<br />
-  
-# CyberBeko WAF (Web Application Firewall)
+The file will store every key pressed along with timestamps for further analysis. <br/>
+Also, when you press **Esc**, the keylogger stops capturing input. <br/>
 
-## Summary
+# Ethical Keylogger: Hands-On Cybersecurity Awareness
 
-1. **Step 1:** Create a new folder and Python file (`Berkays_WAF.py`).
-2. **Step 2:** Paste the WAF code to inspect query strings and POST data for SQL Injection and XSS patterns.
-3. **Step 3:** Install Flask using `pip3 install flask`.
-4. **Step 4:** Run the Flask app using `python3 Berkays_WAF.py`.
-5. **Step 5:** Test the WAF by visiting your local server and attempting SQL Injection or XSS.
+## Project Summary
 
-## Purpose:
-To demonstrate the basic concepts of a Web Application Firewall (WAF) using Flask, specifically to prevent SQL Injection and XSS attacks.
+This project demonstrates the creation of an **ethical keylogger** in Python, designed for educational purposes only. It captures keystrokes within a **secure virtual machine environment** to raise awareness about cyber threats and help learn defensive strategies.
 
-## Goal:
-1. **Educational Tool:** Teach developers about WAFs and basic web security.  
-2. **Security Awareness:** Raise awareness about the importance of web application security.  
-3. **Foundation for Growth:** Provide a starting point for more advanced security features.  
-4. **Promote Best Practices:** Encourage basic security practices and proper web app protection.
+### Summary of Steps:
+
+1. **Step 1:** Set up a **virtual machine** (VM) environment using a **Linux-based OS** like **Kali Linux** or **Ubuntu**.
+2. **Step 2:** Install **Python** and necessary libraries like `pynput` to capture keyboard events.
+3. **Step 3:** Write the **keylogger script** in Python that listens for keypress events and logs them to a text file.
+4. **Step 4:** Run the Python script with the command: `python3 keylogger.py` to start logging keystrokes.
+5. **Step 5:** Test the keylogger in the isolated VM environment to capture keystrokes for **educational purposes only**.
+6. **Step 6:** Review captured keystrokes stored in the `keylog.txt` file for analysis.
 
 ## Disclaimer
 
 ### Important Note:
+## Disclaimer
 
-- This project is intended for **educational purposes only** and should not be used in **production environments**. It is a simple example to demonstrate the basic concepts of a Web Application Firewall.
-  
-- For real-world applications, it is crucial to use a more **robust and production-ready WAF solution**, such as **ModSecurity** or other advanced security tools.
-  
-- This basic WAF does not cover all possible attack vectors and should not be relied upon for securing sensitive or high-traffic applications.
-  
-- Always consider **additional layers of security**, such as input validation, content security policies (CSP), HTTPS, and other security best practices when developing web applications.
-  
-- In **production environments**, be sure to use a proper **WSGI server** like **Gunicorn** or **uWSGI** to run Flask apps securely and efficiently.
+This project is strictly for **educational purposes** and **ethical hacking training**.
 
+- The keylogger demonstrated here is designed to run only in a **secure and isolated virtual machine environment**.
+  
+- **Unauthorized use** of keyloggers on any system without explicit permission is **illegal** and **unethical**.
+  
+- This project aims to **raise awareness about cyber threats** and teach **defensive strategies** against such attacks.
+  
+- The creator is not responsible for any **misuse** of the information provided. Always adhere to **local laws** and **ethical guidelines** when engaging with cybersecurity tools or techniques.
 
 </p>
 
