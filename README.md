@@ -75,9 +75,6 @@ This project demonstrates the creation of an **ethical keylogger** in Python, de
 
 ## Disclaimer
 
-### Important Note:
-## Disclaimer
-
 This project is strictly for **educational purposes** and **ethical hacking training**.
 
 - The keylogger demonstrated here is designed to run only in a **secure and isolated virtual machine environment**.
